@@ -26,8 +26,19 @@
 	    <iframe width="560" height="315" src="https://www.youtube.com/embed/p6sFXrBapSY?si=sQbjF3Ewrf6YfLOm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	</section>
         <section id="about">
-            <h2>About</h2>
-            <p>NIDUP is a simple static website created for demonstration purposes.</p>
+            <h2>Description</h2>
+            <p>Steps:
+1. Create a directory named ‘exp4’ inside HDFS(Hadoop Distributed File System).
+ Command: hdfs dfs -mkdir /exp4
+2. Make sure you’ve download the data from the link provided above and saved it as ‘data.txt’ on Desktop. You can download any one of the files from the many available. 
+3. Copy the file from your local file system(Path: ‘/home/cloudera/Desktop/data.txt’) to HDFS file system(Path: ‘/exp4’).
+ Command: hdfs dis -copyFromLocal ‘path_of_text_file_inside_local_file_system’ ‘path_of_directory_inside_hdfs’
+4. Create a jar file. Open Eclipse, Create new Java Project, Import the necessary external jar files, Copy and paste the java code from the link provided above, save the file, Export as jar file.
+ PATH from where to import external jar files when creating a project: ‘usr/lib/hadoop/lib/*’(except native folder) and ‘usr/lib/hadoop/client/*’.
+5. Execute the jar file using ‘hadoop jar…’ command
+ Command: hadoop jar ‘path_of_hadoop_jar_file’ ‘name_of_main_class_of_the_jar_file’ ‘path_to_input_data’ ‘path_of_where_you_want_to_store_your_output_file’
+6. To view output use the following command
+ Command: hdfs dis -cat ’path_of_output_file/path-r-00000’</p>
         </section>
         <section id="contact">
             <h2>Contact</h2>
