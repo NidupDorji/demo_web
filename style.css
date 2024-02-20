@@ -1,0 +1,19 @@
+/* styles.css */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Additional styles for light mode */
+
+.dark-mode {
+    --background-color: #333333;
+    --text-color: #ffffff;
+}
+
+/* Additional styles for dark mode */
